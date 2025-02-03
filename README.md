@@ -33,8 +33,8 @@ A base de dados foi utilizada conforme a divisão padrão de treino, validação
 
 ## Implementação da Rede Neural
 
-### **Forward Propagation (Propagação Direta)**
-A propagação direta foi implementada iterando pelas camadas da rede e computando as ativações de cada neurônio com base na seguinte equação:
+### **Forward Propagation**
+Foi implementada iterando pelas camadas da rede e computando as ativações de cada neurônio com base na seguinte equação:
 
 \[
 Z^{(l)} = W^{(l)} A^{(l-1)} + b^{(l)}
@@ -49,8 +49,8 @@ Onde:
 - \( A^{(l-1)} \) são as ativações da camada anterior;
 - \( f \) é a função de ativação (ReLU nas camadas ocultas e Softmax na camada de saída).
 
-### **Backward Propagation (Propagação Reversa)**
-A propagação reversa foi implementada para calcular os gradientes dos pesos e vieses a fim de minimizar a função de perda **Cross-Entropy**. O gradiente da função de perda em relação à saída da última camada foi calculado como:
+### **Backward Propagation**
+O backrpopagation foi implementada para calcular os gradientes dos pesos e vieses a fim de minimizar a função de perda **Cross-Entropy**. O gradiente da função de perda em relação à saída da última camada foi calculado como:
 
 \[
 \frac{\partial J}{\partial Z^{(L)}} = A^{(L)} - Y
@@ -109,7 +109,7 @@ Os principais aprendizados deste projeto incluem:
 - **SGD** superou **Adam** para essa configuração.
 - **A profundidade da rede influencia a performance**, mas muitas camadas podem prejudicar o desempenho.
 
-## 📌 Próximos Passos
+## Próximos Passos
 - Explorar arquiteturas **mais profundas** com normalização de batch;
 - Testar outras funções de ativação, como **Leaky ReLU**;
 - Implementar **dropout** para regularização;
